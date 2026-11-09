@@ -1,7 +1,0 @@
-biome,point_id,lat,lon,criterion
-atlantico_nordeste,1,-4.5,-35.0,corrente_norte_do_brasil
-atlantico_nordeste,2,-8.0,-33.5,corrente_norte_do_brasil
-atlantico_sudeste,3,-23.0,-41.0,corrente_do_brasil
-atlantico_sudeste,4,-25.5,-44.0,corrente_do_brasil
-atlantico_sul,5,-30.0,-48.0,confluencia_brasil_malvinas
-atlantico_sul,6,-32.0,-50.0,confluencia_brasil_malvinas

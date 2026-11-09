@@ -1,22 +1,10 @@
-# PARC-Net — materiais complementares da avaliação experimental
+# PARC-Net — Projeto Final
 
-Este repositório reúne materiais complementares ao artigo de avaliação experimental do PARC-Net em séries temporais de imagens de satélite.
+Materiais complementares do artigo **Avaliação experimental do PARC-Net para previsão de séries temporais de imagens de satélite**.
 
-## Escopo desta etapa
+- [Mapa das áreas de estudo](supplementary/figures/mapa_biomas.png)
+- [Diagrama do PARC-Net](supplementary/figures/diagrama_parcnet.png)
+- [Dados geográficos e máscaras](supplementary/regions/)
+- [Scripts das figuras](supplementary/scripts/)
 
-A etapa inicial documenta a origem das figuras e disponibiliza scripts para gerar o diagrama do fluxo do PARC-Net e o mapa das áreas de estudo. O texto científico do artigo permanece em revisão; os resultados preliminares de piloto não são apresentados aqui como resultados confirmatórios.
-
-- [Índice e instruções dos complementos](supplementary/README.md)
-- [Checklist de revisão do artigo](CHECKLIST.md)
-
-## Orientações para utilização
-
-Os scripts destinam-se à documentação e à reprodução das figuras. O mapa depende dos arquivos de configuração e dados geográficos do projeto de origem; sua disponibilização isolada **não garante reprodução completa**. Dados raster brutos, credenciais, resultados não validados e arquivos de ambiente não integram o material complementar.
-
-## Versionamento e DOI
-
-Nenhum DOI está associado a esta versão inicial. A referência ao Zenodo será inserida após a criação e a verificação do registro definitivo pelo autor. Não utilizar um DOI provisório como referência de publicação.
-
-## Estado do material
-
-Repositório de apoio em construção. A versão do artigo, os dados de entrada, as licenças de bases cartográficas e as instruções de replicação serão conferidos antes da divulgação pública ou submissão.
+O mapa conserva o estilo original e apresenta os centros de amostragem e os recortes GOES-16/OISST. Os arquivos de `regions/` foram extraídos do pacote fornecido com o projeto. Para reproduzir o mapa a partir do script original, são necessárias as configurações e dependências do projeto principal `sits-forecasting`.
