@@ -43,3 +43,8 @@ As informações indispensáveis sobre objetivo, desenho experimental, hipótese
 5. Após o autor fornecer e conferir o DOI do Zenodo, acrescentar a citação da versão arquivada ao repositório e ao manuscrito.
 
 **Estado:** material inicial de apoio à revisão, ainda não é um pacote completo de replicação nem um depósito Zenodo.
+
+
+## Auditoria de figuras v7.1
+
+[Relatório de dados, figuras e comparação de layouts](figures/AUDITORIA_V7_1.md) e [tabelas dos pontos](figures/source_data/README.md). A versão compacta do mapa e o diagrama completo foram gerados para revisão; publicar os binários finais após confirmação de atribuições e layout.
