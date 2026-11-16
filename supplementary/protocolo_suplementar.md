@@ -38,6 +38,8 @@ métricas são calculadas sobre alvos observados, sem imputação ou suavizaçã
   complexidade, em 25% fixos dos pixels por região.
 - Quando aplicável, Optuna/TPE realiza até 30 tentativas em no máximo 32 pixels; a influência desses
   limites é examinada por sensibilidade.
+- Após o diagnóstico, os modelos são reajustados nos 85% iniciais com as configurações escolhidas, mantendo os 15%
+  finais reservados; durante o teste, somente históricos e estados são atualizados.
 - Os preditores diretos usam 12 observações; a CNN usa janelas de resíduos prequenciais para treino,
   parada e calibração.
 
@@ -59,3 +61,16 @@ sementes (42, 52 e 62), previsões, falhas, custos e ambiente são registrados p
 Persistência preparada e observada (referências com e sem suavização); ARIMA local (referência local) e *pooled* (base de QP1); PARC-Net e ablação 1×1; LightGBM, SVR, KNN, MLP,
 LSTM e DLinear (preditores diretos, 12 observações); CorrDiff e Earthformer adaptados. As referências
 originais de cada modelo estão no arquivo `references.bib` do artigo.
+
+## S7. Definição formal do MASE
+
+No pixel p da região r, seja A(r,p) o conjunto de pares válidos do ajuste usados na escala e O(r,p) o conjunto
+de origens com alvos observados comuns aos modelos. A escala e o MASE são:
+
+    s(r,p)    = (1 / |A(r,p)|) · Σ_{u ∈ A(r,p)} | y_u − y_{u−1} |
+
+    MASE(r,p) = (1 / ( |O(r,p)| · s(r,p) )) · Σ_{t ∈ O(r,p)} | y_{t+1} − ŷ_{t+1|t} |
+
+A escala é calculada somente no ajuste, com pelo menos 12 pares válidos e quatro alvos comuns por contraste.
+Exclusões, escalas nulas e cobertura são documentadas, pois o erro isolado não informa quantos alvos foram
+previstos.
